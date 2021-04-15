@@ -7,7 +7,9 @@ import com.example.demo.user.SystemUserRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
+@Service
 @RequiredArgsConstructor
 public class SignUpService {
     private final SystemUserRepo systemUserRepo;

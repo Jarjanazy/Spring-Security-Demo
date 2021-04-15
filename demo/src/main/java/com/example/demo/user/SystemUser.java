@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Data @NoArgsConstructor @Builder
+@Data @NoArgsConstructor @Builder @AllArgsConstructor
 public class SystemUser {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
