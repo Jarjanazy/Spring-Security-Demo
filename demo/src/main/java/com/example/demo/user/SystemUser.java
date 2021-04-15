@@ -2,12 +2,13 @@ package com.example.demo.user;
 
 import com.example.demo.security.entity.Authority;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Data @NoArgsConstructor
+@Data @NoArgsConstructor @Builder
 public class SystemUser {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
