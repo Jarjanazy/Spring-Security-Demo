@@ -1,18 +1,16 @@
 package com.example.demo.user;
 
-import com.example.demo.security.Authority;
+import com.example.demo.security.entity.Authority;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data @NoArgsConstructor
 public class SystemUser {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     @Column(unique = true)
@@ -25,4 +23,10 @@ public class SystemUser {
 
     private boolean enabled = true;
 
+    public SystemUser(String userName, String password, Authority authority, boolean enabled) {
+        this.userName = userName;
+        this.password = password;
+        this.authority = authority;
+        this.enabled = enabled;
+    }
 }
