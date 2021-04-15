@@ -23,4 +23,6 @@ public class SystemUser {
     @ManyToOne
     private Authority authority;
 
+    private boolean enabled = true;
+
 }
